@@ -1,0 +1,30 @@
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+
+# ---------- 运行时数据 ----------
+# 数据库和日志不进仓库：数据可以用 run.py 重新采集，体积也远大于代码。
+# 不要提交 data/anime.db —— 里面是全部采集结果。
+data/
+logs/
+
+# ---------- 导出产物 ----------
+# 仓库只保留成品宽表、字段说明和概览，其余是中间产物：
+#   * 豆瓣明细 / 猫眼各表：原始层，可以重跑接口得到
+#   * .parquet：与同名 CSV 内容一致，只是给 pandas 用的另一种编码
+exports/*.parquet
+exports/豆瓣明细.*
+exports/猫眼票房榜.*
+exports/猫眼逐日票房.*
+exports/猫眼大盘.*
+exports/猫眼片单.*
+exports/导出清单.json
+
+# ---------- 本地配置 / 凭据 ----------
+.env
+config.local.toml
+*.log

@@ -1,0 +1,13 @@
+# 核心依赖（豆瓣采集 + 导出，必装）
+requests>=2.31
+lxml>=4.9
+pandas>=2.0
+
+# parquet 导出（可选，装了才有 .parquet 产物）
+pyarrow>=14.0
+
+# 猫眼浏览器采集（可选，不装则自动跳过猫眼详情）
+# DrissionPage>=4.0
+
+# Tableau .hyper 直出（可选，不装则跳过 .hyper）
+# tableauhyperapi>=0.0.19000

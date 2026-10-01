@@ -1,0 +1,9 @@
+# 仓库内一律用 LF 存储与检出，避免 Windows 上 CRLF 混入 diff
+* text=auto eol=lf
+
+# 二进制文件不做换行符转换
+*.parquet binary
+*.db      binary
+*.png     binary
+*.jpg     binary
+*.ico     binary
